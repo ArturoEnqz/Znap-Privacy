@@ -239,6 +239,37 @@
       display: contents;
     }
 
+    .doc-nav {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .doc-nav a {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      backdrop-filter: blur(16px);
+      transition: background 0.15s;
+    }
+
+    .doc-nav a:hover {
+      background: var(--surface-strong);
+    }
+
+    .tos-hero {
+      border-color: rgba(52, 199, 89, 0.35);
+      background: linear-gradient(135deg, rgba(52, 199, 89, 0.12), var(--surface));
+    }
+
     @media (max-width: 760px) {
       .page {
         width: min(100% - 24px, 980px);
@@ -290,7 +321,12 @@
     </header>
 
     <div data-lang-block="en">
-      <article class="hero">
+      <nav class="doc-nav" aria-label="Page sections">
+        <a href="#privacy-en">Privacy Policy</a>
+        <a href="#tos-en">Terms of Service</a>
+      </nav>
+
+      <article class="hero" id="privacy-en">
         <h1>Privacy Policy</h1>
         <p class="lead">Znap is built for sharing stories with people you choose. This policy explains what we collect, how we use it, and the controls you have over your account.</p>
         <span class="updated"><span class="dot"></span> Last updated: April 29, 2026</span>
@@ -319,6 +355,11 @@
         </section>
 
         <section>
+          <h2>Automated Content Moderation</h2>
+          <p>Znap uses automated machine-learning tools to analyse images and video thumbnails you upload. This processing happens on our servers to detect content that violates our Community Guidelines (such as explicit sexual content or graphic violence). Images are not stored for training purposes and are processed solely for safety enforcement.</p>
+        </section>
+
+        <section>
           <h2>Sharing</h2>
           <p>We do not sell your personal information. We share data only with service providers needed to operate Znap, such as cloud hosting, media storage, push notifications, and email delivery, or when required by law or safety obligations.</p>
         </section>
@@ -334,7 +375,7 @@
 
         <section class="wide">
           <h2>Children</h2>
-          <p>Znap is not intended for children under 13. We ask for birthdate during registration to help enforce this requirement.</p>
+          <p>Znap is not intended for children under 13. We ask for birthdate during registration to help enforce this requirement. If we learn that a user is under 13, we will delete their account.</p>
         </section>
 
         <section class="wide callout">
@@ -342,10 +383,83 @@
           <p>For privacy or support questions, contact us at <a href="mailto:arturoenqzsupport@gmail.com">arturoenqzsupport@gmail.com</a>.</p>
         </section>
       </div>
+
+      <!-- ── Terms of Service ─────────────────────────────────────── -->
+      <article class="hero tos-hero" id="tos-en" style="margin-top:32px;">
+        <h1>Terms of Service</h1>
+        <p class="lead">By creating a Znap account you agree to these terms. Please read them carefully.</p>
+        <span class="updated"><span class="dot"></span> Last updated: April 29, 2026</span>
+      </article>
+
+      <div class="grid">
+        <section>
+          <h2>1. Eligibility</h2>
+          <p>You must be at least 13 years old to use Znap. By registering you confirm that you meet this requirement. If you are between 13 and 18, you confirm that a parent or legal guardian has reviewed and agreed to these Terms on your behalf.</p>
+        </section>
+
+        <section>
+          <h2>2. Your Account</h2>
+          <p>You are responsible for keeping your credentials secure and for all activity that occurs under your account. You may not share your account or create accounts to evade a suspension or ban.</p>
+        </section>
+
+        <section>
+          <h2>3. User-Generated Content</h2>
+          <p>You retain ownership of the content you post. By uploading content to Znap you grant us a non-exclusive, royalty-free, worldwide licence to store, display, and distribute that content solely to operate the service. You are solely responsible for ensuring your content does not violate any law or third-party rights.</p>
+        </section>
+
+        <section>
+          <h2>4. Prohibited Conduct</h2>
+          <p>You agree not to post or transmit content that:</p>
+          <ul>
+            <li>Is sexually explicit, pornographic, or involves minors in any sexual context.</li>
+            <li>Contains graphic violence, gore, or instructions for self-harm.</li>
+            <li>Harasses, threatens, or bullies other users.</li>
+            <li>Promotes hate speech or discrimination based on protected characteristics.</li>
+            <li>Infringes intellectual property rights or violates any applicable law.</li>
+            <li>Involves spam, phishing, impersonation, or deceptive practices.</li>
+          </ul>
+          <p>Violations may result in content removal, account suspension, or permanent ban.</p>
+        </section>
+
+        <section>
+          <h2>5. Content Moderation</h2>
+          <p>Znap uses automated tools and human review to enforce these Terms and our Community Guidelines. We reserve the right to remove content or suspend accounts that violate our policies, with or without prior notice.</p>
+        </section>
+
+        <section>
+          <h2>6. Intellectual Property</h2>
+          <p>The Znap name, logo, and all app code are the property of Znap and its developers. You may not copy, modify, or distribute any part of the service without written permission.</p>
+        </section>
+
+        <section>
+          <h2>7. Disclaimers and Limitation of Liability</h2>
+          <p>Znap is provided "as is" without warranties of any kind. To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the service.</p>
+        </section>
+
+        <section>
+          <h2>8. Termination</h2>
+          <p>You may delete your account at any time from Settings. We may suspend or terminate your account if you violate these Terms. Upon termination, your right to use Znap ceases immediately.</p>
+        </section>
+
+        <section class="wide">
+          <h2>9. Changes to These Terms</h2>
+          <p>We may update these Terms from time to time. We will notify you of material changes through the app or by email. Continued use of Znap after changes take effect constitutes acceptance of the updated Terms.</p>
+        </section>
+
+        <section class="wide callout">
+          <h2>10. Contact</h2>
+          <p>Questions about these Terms? Contact us at <a href="mailto:arturoenqzsupport@gmail.com">arturoenqzsupport@gmail.com</a>.</p>
+        </section>
+      </div>
     </div>
 
     <div data-lang-block="es">
-      <article class="hero">
+      <nav class="doc-nav" aria-label="Secciones de la página">
+        <a href="#privacy-es">Política de Privacidad</a>
+        <a href="#tos-es">Términos de Servicio</a>
+      </nav>
+
+      <article class="hero" id="privacy-es">
         <h1>Política de Privacidad</h1>
         <p class="lead">Znap está hecha para compartir historias con las personas que eliges. Esta política explica qué recopilamos, cómo lo usamos y qué controles tienes sobre tu cuenta.</p>
         <span class="updated"><span class="dot"></span> Última actualización: 29 de abril de 2026</span>
@@ -374,6 +488,11 @@
         </section>
 
         <section>
+          <h2>Moderación Automatizada de Contenido</h2>
+          <p>Znap utiliza herramientas automáticas de aprendizaje automático para analizar las imágenes y miniaturas de video que subes. Este procesamiento ocurre en nuestros servidores para detectar contenido que infrinja nuestras Normas de Comunidad (como contenido sexual explícito o violencia gráfica). Las imágenes no se almacenan con fines de entrenamiento y se procesan únicamente para hacer cumplir la seguridad.</p>
+        </section>
+
+        <section>
           <h2>Compartición</h2>
           <p>No vendemos tu información personal. Compartimos datos solo con proveedores necesarios para operar Znap, como hospedaje en la nube, almacenamiento de medios, notificaciones push y envío de correo, o cuando sea requerido por ley u obligaciones de seguridad.</p>
         </section>
@@ -389,12 +508,80 @@
 
         <section class="wide">
           <h2>Menores</h2>
-          <p>Znap no está dirigida a menores de 13 años. Solicitamos fecha de nacimiento durante el registro para ayudar a cumplir este requisito.</p>
+          <p>Znap no está dirigida a menores de 13 años. Solicitamos fecha de nacimiento durante el registro para ayudar a cumplir este requisito. Si detectamos que un usuario es menor de 13 años, eliminaremos su cuenta.</p>
         </section>
 
         <section class="wide callout">
           <h2>Contacto</h2>
           <p>Para preguntas de privacidad o soporte, contáctanos en <a href="mailto:arturoenqzsupport@gmail.com">arturoenqzsupport@gmail.com</a>.</p>
+        </section>
+      </div>
+
+      <!-- ── Términos de Servicio ─────────────────────────────────── -->
+      <article class="hero tos-hero" id="tos-es" style="margin-top:32px;">
+        <h1>Términos de Servicio</h1>
+        <p class="lead">Al crear una cuenta en Znap aceptas estos términos. Por favor léelos con atención.</p>
+        <span class="updated"><span class="dot"></span> Última actualización: 29 de abril de 2026</span>
+      </article>
+
+      <div class="grid">
+        <section>
+          <h2>1. Elegibilidad</h2>
+          <p>Debes tener al menos 13 años para usar Znap. Al registrarte confirmas que cumples este requisito. Si tienes entre 13 y 18 años, confirmas que un padre o tutor legal ha revisado y aceptado estos Términos en tu nombre.</p>
+        </section>
+
+        <section>
+          <h2>2. Tu Cuenta</h2>
+          <p>Eres responsable de mantener tus credenciales seguras y de toda la actividad que ocurra bajo tu cuenta. No puedes compartir tu cuenta ni crear cuentas para evadir una suspensión o prohibición.</p>
+        </section>
+
+        <section>
+          <h2>3. Contenido Generado por el Usuario</h2>
+          <p>Conservas la propiedad del contenido que publicas. Al subir contenido a Znap nos otorgas una licencia no exclusiva, libre de regalías y mundial para almacenar, mostrar y distribuir ese contenido únicamente para operar el servicio. Eres el único responsable de asegurarte de que tu contenido no infrinja ninguna ley ni derechos de terceros.</p>
+        </section>
+
+        <section>
+          <h2>4. Conducta Prohibida</h2>
+          <p>Aceptas no publicar ni transmitir contenido que:</p>
+          <ul>
+            <li>Sea sexualmente explícito, pornográfico o involucre a menores en cualquier contexto sexual.</li>
+            <li>Contenga violencia gráfica, gore o instrucciones para autolesionarse.</li>
+            <li>Acose, amenace o intimide a otros usuarios.</li>
+            <li>Promueva discurso de odio o discriminación basada en características protegidas.</li>
+            <li>Infrinja derechos de propiedad intelectual o viole cualquier ley aplicable.</li>
+            <li>Involucre spam, phishing, suplantación de identidad o prácticas engañosas.</li>
+          </ul>
+          <p>Las infracciones pueden resultar en eliminación de contenido, suspensión de cuenta o prohibición permanente.</p>
+        </section>
+
+        <section>
+          <h2>5. Moderación de Contenido</h2>
+          <p>Znap utiliza herramientas automatizadas y revisión humana para hacer cumplir estos Términos y nuestras Normas de Comunidad. Nos reservamos el derecho de eliminar contenido o suspender cuentas que violen nuestras políticas, con o sin previo aviso.</p>
+        </section>
+
+        <section>
+          <h2>6. Propiedad Intelectual</h2>
+          <p>El nombre Znap, el logotipo y todo el código de la app son propiedad de Znap y sus desarrolladores. No puedes copiar, modificar ni distribuir ninguna parte del servicio sin permiso escrito.</p>
+        </section>
+
+        <section>
+          <h2>7. Exenciones de Responsabilidad y Limitación de Responsabilidad</h2>
+          <p>Znap se proporciona "tal cual" sin garantías de ningún tipo. En la máxima medida permitida por la ley, no somos responsables de ningún daño indirecto, incidental o consecuente que surja de tu uso del servicio.</p>
+        </section>
+
+        <section>
+          <h2>8. Terminación</h2>
+          <p>Puedes eliminar tu cuenta en cualquier momento desde Ajustes. Podemos suspender o cancelar tu cuenta si infringes estos Términos. Tras la terminación, tu derecho a usar Znap cesa de inmediato.</p>
+        </section>
+
+        <section class="wide">
+          <h2>9. Cambios en Estos Términos</h2>
+          <p>Podemos actualizar estos Términos de vez en cuando. Te notificaremos los cambios importantes a través de la app o por correo electrónico. El uso continuado de Znap después de que los cambios entren en vigor constituye la aceptación de los Términos actualizados.</p>
+        </section>
+
+        <section class="wide callout">
+          <h2>10. Contacto</h2>
+          <p>¿Preguntas sobre estos Términos? Contáctanos en <a href="mailto:arturoenqzsupport@gmail.com">arturoenqzsupport@gmail.com</a>.</p>
         </section>
       </div>
     </div>
