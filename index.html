@@ -1,11 +1,452 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la página</title>
-</head>
-<body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Znap Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.66);
+      --surface: rgba(255, 255, 255, 0.12);
+      --surface-strong: rgba(255, 255, 255, 0.17);
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #3f51b5;
+      --accent-2: #34c759;
+      --danger: #ff453a;
+      --shadow: rgba(0, 0, 0, 0.28);
+    }
 
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f0f2f5;
+        --text: #05060a;
+        --muted: rgba(0, 0, 0, 0.58);
+        --surface: rgba(255, 255, 255, 0.82);
+        --surface-strong: rgba(255, 255, 255, 0.96);
+        --border: rgba(0, 0, 0, 0.1);
+        --shadow: rgba(30, 35, 55, 0.12);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(63, 81, 181, 0.24), transparent 34rem),
+        radial-gradient(circle at bottom right, rgba(52, 199, 89, 0.16), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    .page {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 52px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 26px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), #6273e8);
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 14px 32px var(--shadow);
+    }
+
+    .brand-title {
+      font-size: 22px;
+      font-weight: 850;
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    .brand-subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      margin: -3px 0 0;
+    }
+
+    .language-switch {
+      display: flex;
+      gap: 6px;
+      padding: 5px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      backdrop-filter: blur(22px);
+      flex-shrink: 0;
+    }
+
+    .language-switch button {
+      appearance: none;
+      border: 0;
+      border-radius: 12px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 750;
+      min-width: 46px;
+      padding: 8px 11px;
+    }
+
+    .language-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .hero {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: 0 20px 60px var(--shadow);
+      backdrop-filter: blur(28px);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 7vw, 64px);
+      line-height: 0.98;
+      letter-spacing: 0;
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(16px, 2.4vw, 19px);
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    section {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      backdrop-filter: blur(24px);
+      padding: 22px;
+    }
+
+    section.wide {
+      grid-column: 1 / -1;
+    }
+
+    h2 {
+      font-size: 19px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    p {
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      color: var(--muted);
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: var(--text);
+      font-weight: 750;
+      text-decoration-color: rgba(63, 81, 181, 0.72);
+      text-underline-offset: 3px;
+    }
+
+    .callout {
+      border-color: rgba(63, 81, 181, 0.45);
+      background: linear-gradient(135deg, rgba(63, 81, 181, 0.22), var(--surface));
+    }
+
+    .danger {
+      border-color: rgba(255, 69, 58, 0.36);
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      padding: 26px 10px 0;
+    }
+
+    [data-lang-block] {
+      display: none;
+    }
+
+    [data-active-lang="en"] [data-lang-block="en"],
+    [data-active-lang="es"] [data-lang-block="es"] {
+      display: contents;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 24px, 980px);
+        padding-top: 18px;
+      }
+
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .language-switch {
+        width: 100%;
+      }
+
+      .language-switch button {
+        flex: 1;
+      }
+
+      .hero {
+        padding: 24px;
+        border-radius: 22px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body data-active-lang="en">
+  <main class="page">
+    <header>
+      <div class="brand">
+        <div class="mark" aria-hidden="true">Z</div>
+        <div>
+          <p class="brand-title">Znap</p>
+          <p class="brand-subtitle" data-i18n="brandSubtitle"></p>
+        </div>
+      </div>
+      <nav class="language-switch" aria-label="Language">
+        <button type="button" data-set-lang="es">ES</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </nav>
+    </header>
+
+    <div data-lang-block="en">
+      <article class="hero">
+        <h1>Privacy Policy</h1>
+        <p class="lead">Znap is built for sharing stories with people you choose. This policy explains what we collect, how we use it, and the controls you have over your account.</p>
+        <span class="updated"><span class="dot"></span> Last updated: April 29, 2026</span>
+      </article>
+
+      <div class="grid">
+        <section>
+          <h2>Information We Collect</h2>
+          <ul>
+            <li>Account details such as name, username, email address, password hash, birthdate, profile photo, biography, and language preference.</li>
+            <li>Content you create or upload, including stories, comments, profile images, thumbnails, and optional identity verification documents.</li>
+            <li>Social and safety activity such as follows, blocks, reports, moderation status, and account suspension records.</li>
+            <li>Technical data needed to run the app, including authentication tokens, push notification tokens, time zone, device platform, and basic request metadata.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How We Use Information</h2>
+          <ul>
+            <li>To create and secure your account.</li>
+            <li>To show your profile, stories, comments, followers, and following lists.</li>
+            <li>To send notifications you enable.</li>
+            <li>To review reports, enforce community guidelines, prevent abuse, and support account verification.</li>
+            <li>To maintain, debug, and improve Znap.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Sharing</h2>
+          <p>We do not sell your personal information. We share data only with service providers needed to operate Znap, such as cloud hosting, media storage, push notifications, and email delivery, or when required by law or safety obligations.</p>
+        </section>
+
+        <section>
+          <h2>Your Controls</h2>
+          <ul>
+            <li>You can edit your profile, change your email or password, manage blocked users, and turn push notifications on or off in the app.</li>
+            <li>You can report users, stories, and comments that may violate Znap's rules.</li>
+            <li>You can delete your account from Settings. Account deletion removes your account and associated content from our active systems, except information we must keep for legal, security, or abuse-prevention reasons.</li>
+          </ul>
+        </section>
+
+        <section class="wide">
+          <h2>Children</h2>
+          <p>Znap is not intended for children under 13. We ask for birthdate during registration to help enforce this requirement.</p>
+        </section>
+
+        <section class="wide callout">
+          <h2>Contact</h2>
+          <p>For privacy or support questions, contact us at <a href="mailto:arturoenqzsupport@gmail.com">arturoenqzsupport@gmail.com</a>.</p>
+        </section>
+      </div>
+    </div>
+
+    <div data-lang-block="es">
+      <article class="hero">
+        <h1>Política de Privacidad</h1>
+        <p class="lead">Znap está hecha para compartir historias con las personas que eliges. Esta política explica qué recopilamos, cómo lo usamos y qué controles tienes sobre tu cuenta.</p>
+        <span class="updated"><span class="dot"></span> Última actualización: 29 de abril de 2026</span>
+      </article>
+
+      <div class="grid">
+        <section>
+          <h2>Información Que Recopilamos</h2>
+          <ul>
+            <li>Datos de cuenta como nombre, usuario, correo, hash de contraseña, fecha de nacimiento, foto de perfil, biografía y preferencia de idioma.</li>
+            <li>Contenido que creas o subes, incluyendo historias, comentarios, imágenes de perfil, miniaturas y documentos opcionales de verificación de identidad.</li>
+            <li>Actividad social y de seguridad como seguidores, seguidos, bloqueos, reportes, estado de moderación y registros de suspensión de cuenta.</li>
+            <li>Datos técnicos necesarios para operar la app, incluyendo tokens de autenticación, tokens de notificaciones push, zona horaria, plataforma del dispositivo y metadatos básicos de solicitudes.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Cómo Usamos La Información</h2>
+          <ul>
+            <li>Para crear y proteger tu cuenta.</li>
+            <li>Para mostrar tu perfil, historias, comentarios, seguidores y seguidos.</li>
+            <li>Para enviarte las notificaciones que actives.</li>
+            <li>Para revisar reportes, aplicar las normas comunitarias, prevenir abuso y apoyar la verificación de cuentas.</li>
+            <li>Para mantener, depurar y mejorar Znap.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Compartición</h2>
+          <p>No vendemos tu información personal. Compartimos datos solo con proveedores necesarios para operar Znap, como hospedaje en la nube, almacenamiento de medios, notificaciones push y envío de correo, o cuando sea requerido por ley u obligaciones de seguridad.</p>
+        </section>
+
+        <section>
+          <h2>Tus Controles</h2>
+          <ul>
+            <li>Puedes editar tu perfil, cambiar tu correo o contraseña, administrar usuarios bloqueados y activar o desactivar notificaciones push desde la app.</li>
+            <li>Puedes reportar usuarios, historias y comentarios que puedan incumplir las reglas de Znap.</li>
+            <li>Puedes eliminar tu cuenta desde Ajustes. La eliminación remueve tu cuenta y contenido asociado de nuestros sistemas activos, salvo información que debamos conservar por razones legales, de seguridad o prevención de abuso.</li>
+          </ul>
+        </section>
+
+        <section class="wide">
+          <h2>Menores</h2>
+          <p>Znap no está dirigida a menores de 13 años. Solicitamos fecha de nacimiento durante el registro para ayudar a cumplir este requisito.</p>
+        </section>
+
+        <section class="wide callout">
+          <h2>Contacto</h2>
+          <p>Para preguntas de privacidad o soporte, contáctanos en <a href="mailto:arturoenqzsupport@gmail.com">arturoenqzsupport@gmail.com</a>.</p>
+        </section>
+      </div>
+    </div>
+
+    <footer>Znap</footer>
+  </main>
+
+  <script>
+    const supportedLanguages = new Set(["es", "en"]);
+    const storageKey = "znap.privacy.language";
+    const copy = {
+      en: { brandSubtitle: "Privacy and support" },
+      es: { brandSubtitle: "Privacidad y soporte" }
+    };
+
+    function detectLanguage() {
+      const saved = localStorage.getItem(storageKey);
+      if (supportedLanguages.has(saved)) return saved;
+
+      const browserLanguages = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || "en"];
+
+      const matched = browserLanguages
+        .map((lang) => String(lang).slice(0, 2).toLowerCase())
+        .find((lang) => supportedLanguages.has(lang));
+
+      return matched || "en";
+    }
+
+    function setLanguage(language, persist) {
+      const nextLanguage = supportedLanguages.has(language) ? language : "en";
+      document.documentElement.lang = nextLanguage;
+      document.body.dataset.activeLang = nextLanguage;
+
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.setLang === nextLanguage));
+      });
+
+      document.querySelectorAll("[data-i18n]").forEach((node) => {
+        const key = node.dataset.i18n;
+        node.textContent = copy[nextLanguage][key] || "";
+      });
+
+      if (persist) localStorage.setItem(storageKey, nextLanguage);
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.setLang, true));
+    });
+
+    setLanguage(detectLanguage(), false);
+  </script>
 </body>
 </html>
